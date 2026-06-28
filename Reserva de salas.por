@@ -1,13 +1,27 @@
 programa {
   funcao inicio() {
-    inteiro opcao,senha,um=0,dois=0,tres=0,quatro=0,cinco=0,opcao2
+    inteiro opcao,senha,um=0,dois=0,tres=0,quatro=0,cinco=0,opcao2,chances=0
     cadeia sala1, sala2, sala3, sala4, sala5, usu,sn, nome1=" ", nome2=" ", nome3=" ", nome4=" ", nome5=" " 
-    
-    escreva("Digete um nome de usuario: ")
+   
+   enquanto(chances < 3){
+
+    escreva("Digite o usuário: ")
     leia(usu)
-    escreva("Digete a senha senha do sistema: ")
+
+    escreva("Digite a senha: ")
     leia(senha)
-    
+
+    se(senha == 1234){
+        // entra no sistema
+        pare
+    }
+
+    chances = chances + 1
+
+    escreva("Senha incorreta!\n")
+    se (chances >=3)escreva("Você excedeu o número de tentativas.")
+} 
+
     se(senha == 1234) {
     enquanto (opcao!=7){
     
@@ -145,8 +159,5 @@ pare
   }
       
   }
-  }senao{
-    escreva("Senha incorreta tente novamente mais tarde")
-    
-  }
+  } 
     }}
